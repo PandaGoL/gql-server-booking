@@ -1,0 +1,12 @@
+type Query {
+    GetUsers: GetUsersResponse!
+}
+
+type Mutation {
+    CreateUser(user: NewUser!):User!
+}
+
+type GetUsersResponse {
+    results: [User!]!
+    total: Int!
+}

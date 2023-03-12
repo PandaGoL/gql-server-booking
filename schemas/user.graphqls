@@ -1,0 +1,16 @@
+type User {
+    id: String!
+    msisdn: String!
+    firstname: String!
+    lastname: String!
+    email: String!
+}
+
+input NewUser{
+    msisdn: String!
+    firstname: String!
+    lastname: String!
+    email: String!
+    login: String!
+    passwd: String!
+}
