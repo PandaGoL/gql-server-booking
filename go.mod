@@ -1,4 +1,4 @@
-module gql-server
+module github.com/PandaGoL/gql-server-booking
 
 go 1.19
 

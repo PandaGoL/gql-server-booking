@@ -7,25 +7,26 @@ package resolver
 import (
 	"context"
 	"fmt"
-	"gql-server/models"
-	"gql-server/server"
+
+	models1 "github.com/PandaGoL/gql-server-booking/models"
+	server1 "github.com/PandaGoL/gql-server-booking/server"
 )
 
 // CreateUser is the resolver for the CreateUser field.
-func (r *mutationResolver) CreateUser(ctx context.Context, user models.NewUser) (*models.User, error) {
+func (r *mutationResolver) CreateUser(ctx context.Context, user models1.NewUser) (*models1.User, error) {
 	panic(fmt.Errorf("not implemented: CreateUser - CreateUser"))
 }
 
 // GetUsers is the resolver for the GetUsers field.
-func (r *queryResolver) GetUsers(ctx context.Context) (*models.GetUsersResponse, error) {
+func (r *queryResolver) GetUsers(ctx context.Context) (*models1.GetUsersResponse, error) {
 	panic(fmt.Errorf("not implemented: GetUsers - GetUsers"))
 }
 
-// Mutation returns server.MutationResolver implementation.
-func (r *Resolver) Mutation() server.MutationResolver { return &mutationResolver{r} }
+// Mutation returns server1.MutationResolver implementation.
+func (r *Resolver) Mutation() server1.MutationResolver { return &mutationResolver{r} }
 
-// Query returns server.QueryResolver implementation.
-func (r *Resolver) Query() server.QueryResolver { return &queryResolver{r} }
+// Query returns server1.QueryResolver implementation.
+func (r *Resolver) Query() server1.QueryResolver { return &queryResolver{r} }
 
 type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }

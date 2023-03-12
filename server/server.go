@@ -7,13 +7,13 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"gql-server/models"
 	"strconv"
 	"sync"
 	"sync/atomic"
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
+	"github.com/PandaGoL/gql-server-booking/models"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )
@@ -266,7 +266,7 @@ func (ec *executionContext) field_Mutation_CreateUser_args(ctx context.Context, 
 	var arg0 models.NewUser
 	if tmp, ok := rawArgs["user"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("user"))
-		arg0, err = ec.unmarshalNNewUser2gqlᚑserverᚋmodelsᚐNewUser(ctx, tmp)
+		arg0, err = ec.unmarshalNNewUser2githubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐNewUser(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -356,7 +356,7 @@ func (ec *executionContext) _GetUsersResponse_results(ctx context.Context, field
 	}
 	res := resTmp.([]*models.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚕᚖgqlᚑserverᚋmodelsᚐUserᚄ(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚕᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐUserᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_GetUsersResponse_results(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -456,7 +456,7 @@ func (ec *executionContext) _Mutation_CreateUser(ctx context.Context, field grap
 	}
 	res := resTmp.(*models.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖgqlᚑserverᚋmodelsᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_CreateUser(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -523,7 +523,7 @@ func (ec *executionContext) _Query_GetUsers(ctx context.Context, field graphql.C
 	}
 	res := resTmp.(*models.GetUsersResponse)
 	fc.Result = res
-	return ec.marshalNGetUsersResponse2ᚖgqlᚑserverᚋmodelsᚐGetUsersResponse(ctx, field.Selections, res)
+	return ec.marshalNGetUsersResponse2ᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐGetUsersResponse(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_GetUsers(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -3271,11 +3271,11 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNGetUsersResponse2gqlᚑserverᚋmodelsᚐGetUsersResponse(ctx context.Context, sel ast.SelectionSet, v models.GetUsersResponse) graphql.Marshaler {
+func (ec *executionContext) marshalNGetUsersResponse2githubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐGetUsersResponse(ctx context.Context, sel ast.SelectionSet, v models.GetUsersResponse) graphql.Marshaler {
 	return ec._GetUsersResponse(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNGetUsersResponse2ᚖgqlᚑserverᚋmodelsᚐGetUsersResponse(ctx context.Context, sel ast.SelectionSet, v *models.GetUsersResponse) graphql.Marshaler {
+func (ec *executionContext) marshalNGetUsersResponse2ᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐGetUsersResponse(ctx context.Context, sel ast.SelectionSet, v *models.GetUsersResponse) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3300,7 +3300,7 @@ func (ec *executionContext) marshalNInt2int(ctx context.Context, sel ast.Selecti
 	return res
 }
 
-func (ec *executionContext) unmarshalNNewUser2gqlᚑserverᚋmodelsᚐNewUser(ctx context.Context, v interface{}) (models.NewUser, error) {
+func (ec *executionContext) unmarshalNNewUser2githubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐNewUser(ctx context.Context, v interface{}) (models.NewUser, error) {
 	res, err := ec.unmarshalInputNewUser(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
@@ -3320,11 +3320,11 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNUser2gqlᚑserverᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v models.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2githubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v models.User) graphql.Marshaler {
 	return ec._User(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNUser2ᚕᚖgqlᚑserverᚋmodelsᚐUserᚄ(ctx context.Context, sel ast.SelectionSet, v []*models.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚕᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐUserᚄ(ctx context.Context, sel ast.SelectionSet, v []*models.User) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -3348,7 +3348,7 @@ func (ec *executionContext) marshalNUser2ᚕᚖgqlᚑserverᚋmodelsᚐUserᚄ(c
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNUser2ᚖgqlᚑserverᚋmodelsᚐUser(ctx, sel, v[i])
+			ret[i] = ec.marshalNUser2ᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐUser(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3368,7 +3368,7 @@ func (ec *executionContext) marshalNUser2ᚕᚖgqlᚑserverᚋmodelsᚐUserᚄ(c
 	return ret
 }
 
-func (ec *executionContext) marshalNUser2ᚖgqlᚑserverᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v *models.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋPandaGoLᚋgqlᚑserverᚑbookingᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v *models.User) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
